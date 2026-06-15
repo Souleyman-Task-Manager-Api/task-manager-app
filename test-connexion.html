@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Connexion</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Test API Task Manager</h1>
+    <button onclick="tester()">Tester la connexion</button>
+    <div id="resultat"></div>
+
+    <script>
+        async function tester() {
+            const div = document.getElementById('resultat');
+            div.innerHTML = '<p>Connexion en cours...</p>';
+            
+            try {
+                const reponse = await fetch('http://localhost:3000/account/signin', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({username: 'admin', password: 'admin123', socialLogin: false})
+                });
+                
+                const data = await reponse.json();
+                
+                if (data.success) {
+                    div.innerHTML = '<div class="success"><h3>✓ Connexion réussie !</h3><p>Utilisateur: ' + data.user.username + '</p><p>Email: ' + data.user.email + '</p></div>';
+                } else {
+                    div.innerHTML = '<div class="error"><h3>✗ Échec</h3><p>' + data.message + '</p></div>';
+                }
+            } catch (erreur) {
+                div.innerHTML = '<div class="error"><h3>✗ Erreur</h3><p>' + erreur.message + '</p></div>';
+            }
+        }
+    </script>
+</body>
+</html>

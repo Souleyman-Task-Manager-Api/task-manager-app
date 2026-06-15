@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>{{ isEditMode ? '✏ Modifier la tâche' : '➕ Nouvelle tâche' }}</h2>
+
+  <div class="task-form">
+    <input [(ngModel)]="form.title" placeholder="Titre *">
+    <textarea [(ngModel)]="form.description" placeholder="Description"></textarea>
+    <select [(ngModel)]="form.priority">
+      <option value="LOW">Basse</option>
+      <option value="MEDIUM">Moyenne</option>
+      <option value="HIGH">Haute</option>
+      <option value="URGENT">Urgente</option>
+    </select>
+
+    <button (click)="saveTask()">{{ isEditMode ? 'Mettre à jour' : 'Créer' }}</button>
+    <button (click)="goBack()">Annuler</button>
+  </div>
+</div>

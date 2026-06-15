@@ -1,0 +1,17 @@
+<div class="container" *ngIf="task">
+  <h2>📄 Détail de la tâche</h2>
+
+  <div class="detail-card">
+    <h3>{{ task.title }}</h3>
+    <p><strong>Description :</strong> {{ task.description }}</p>
+    <p><strong>Statut :</strong> {{ task.status }}</p>
+    <p><strong>Priorité :</strong> <span class="priority {{ task.priority }}">{{ task.priority }}</span></p>
+    <p><strong>Créée le :</strong> {{ task.createdAt | date:'dd/MM/yyyy HH:mm' }}</p>
+    <p><strong>Modifiée le :</strong> {{ task.updatedAt | date:'dd/MM/yyyy HH:mm' }}</p>
+
+    <div class="actions">
+      <button [routerLink]="['/tasks/edit', task.id]">✏ Modifier</button>
+      <button (click)="goBack()">⬅ Retour à la liste</button>
+    </div>
+  </div>
+</div>
