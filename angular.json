@@ -6,7 +6,11 @@
   },
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "task-manager-app": {
+=======
+    "task-manager-clean": {
+>>>>>>> f76e1179805d20a0b4910997d154f17a3b9adcc8
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +60,17 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
+<<<<<<< HEAD
               "buildTarget": "task-manager-app:build:production"
             },
             "development": {
               "buildTarget": "task-manager-app:build:development"
+=======
+              "buildTarget": "task-manager-clean:build:production"
+            },
+            "development": {
+              "buildTarget": "task-manager-clean:build:development"
+>>>>>>> f76e1179805d20a0b4910997d154f17a3b9adcc8
             }
           },
           "defaultConfiguration": "development"

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "task-manager-app",
+=======
+  "name": "task-manager-clean",
+>>>>>>> f76e1179805d20a0b4910997d154f17a3b9adcc8
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -9,24 +13,41 @@
     "test": "ng test"
   },
   "private": true,
+<<<<<<< HEAD
   "packageManager": "npm@11.13.0",
+=======
+  "packageManager": "npm@11.3.0",
+>>>>>>> f76e1179805d20a0b4910997d154f17a3b9adcc8
   "dependencies": {
     "@angular/common": "^21.2.0",
     "@angular/compiler": "^21.2.0",
     "@angular/core": "^21.2.0",
+<<<<<<< HEAD
     "@angular/forms": "^21.2.16",
+=======
+    "@angular/forms": "^21.2.0",
+>>>>>>> f76e1179805d20a0b4910997d154f17a3b9adcc8
     "@angular/platform-browser": "^21.2.0",
     "@angular/router": "^21.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@angular/build": "^21.2.13",
     "@angular/cli": "^21.2.13",
+=======
+    "@angular/build": "^21.2.11",
+    "@angular/cli": "^21.2.11",
+>>>>>>> f76e1179805d20a0b4910997d154f17a3b9adcc8
     "@angular/compiler-cli": "^21.2.0",
     "jsdom": "^28.0.0",
     "prettier": "^3.8.1",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f76e1179805d20a0b4910997d154f17a3b9adcc8

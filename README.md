@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # TaskManagerApp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.13.
+=======
+# TaskManagerClean
+
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
+>>>>>>> f76e1179805d20a0b4910997d154f17a3b9adcc8
 
 ## Development server
 
