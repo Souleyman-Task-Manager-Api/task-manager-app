@@ -1,9 +1,14 @@
 <div class="container">
-  <h2>{{ isEditMode ? '✏ Modifier la tâche' : '➕ Nouvelle tâche' }}</h2>
+  <h2>{{ isEditMode ? 'Modifier la tâche' : 'Nouvelle tâche' }}</h2>
 
   <div class="task-form">
-    <input [(ngModel)]="form.title" placeholder="Titre *">
-    <textarea [(ngModel)]="form.description" placeholder="Description"></textarea>
+    <label>Titre :</label>
+    <input [(ngModel)]="form.title" placeholder="Titre de la tâche" required>
+
+    <label>Description :</label>
+    <textarea [(ngModel)]="form.description" placeholder="Description détaillée"></textarea>
+
+    <label>Priorité :</label>
     <select [(ngModel)]="form.priority">
       <option value="LOW">Basse</option>
       <option value="MEDIUM">Moyenne</option>

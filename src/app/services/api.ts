@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
-  private baseUrl = 'http://localhost:3000';
+  private baseUrl = 'http://localhost:4000';  // ← CHANGEMENT ICI
 
   constructor(private http: HttpClient) {}
 

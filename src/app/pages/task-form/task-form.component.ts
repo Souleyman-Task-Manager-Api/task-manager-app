@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from '../../services/api';
 
 @Component({
   selector: 'app-task-form',
-  standalone: true,  // ← AJOUTER
-  imports: [CommonModule, FormsModule, RouterModule],  // ← AJOUTER
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './task-form.component.html',
   styleUrls: ['./task-form.component.css']
 })
@@ -27,7 +27,11 @@ export class TaskFormComponent implements OnInit {
     if (this.taskId) {
       this.isEditMode = true;
       this.api.getTask(this.taskId).subscribe((res: any) => {
-        this.form = { title: res.title, description: res.description, priority: res.priority };
+        this.form = {
+          title: res.title,
+          description: res.description,
+          priority: res.priority
+        };
       });
     }
   }
